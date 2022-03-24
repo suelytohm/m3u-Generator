@@ -30,18 +30,6 @@ app.get('/link', function (req, res) {
 })
 
 
-app.get('/arquivo', function (req, res) {   
-
-    let imagem = req.body.imagem
-    let grupo = req.body.grupo
-    let titulo = req.body.titulo
-    let link = req.body.link
-
-    montarArquivo(imagem, grupo, titulo, link)
-
-    salvarArquivo(linha)
-})
-
 
 app.get('/pegarDados', async function(req, res) {
     const dados = await pegarDados();
